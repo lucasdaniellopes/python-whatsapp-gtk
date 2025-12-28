@@ -21,7 +21,7 @@ Para sanar essas questões, resolvi criar minha própria solução em **Python**
 ## Pré-requisitos
 Para rodar o projeto, você precisa do Python 3 e das bibliotecas do sistema do GTK e WebKit. Escolha o comando de acordo com sua distribuição:
 
-### Debian based (Debian, Ubuntu, Linux Mint, Zorin OS, Pop!_OS...)
+### Debian / Ubuntu / Pop!_OS
 ```bash
 sudo apt update
 sudo apt install -y python3 python3-gi python3-gi-cairo gir1.2-gtk-3.0 gir1.2-webkit2-4.1
@@ -32,13 +32,12 @@ sudo apt install -y python3 python3-gi python3-gi-cairo gir1.2-gtk-3.0 gir1.2-we
 sudo dnf install python3 python3-gobject python3-cairo gtk3 webkit2gtk4.1
 ```
 
-### Arch Linux / Manjaro / EndeavourOS / BigLinux
+### Arch Linux / Manjaro / EndeavourOS
 ```bash
 sudo pacman -S python python-gobject python-cairo gtk3 webkit2gtk-4.1
 ```
 
 ### Slackware
-(assumo que tenha feito a instalação padrão ou full)
 ```bash
 sudo slackpkg update
 sudo slackpkg install python3 pygobject3 pycairo gtk+3 webkit2gtk
@@ -73,17 +72,17 @@ A arquitetura funciona em três camadas:
 3. Engine (Renderização): O WebKit2 (mesmo motor do Safari) renderiza o WhatsApp Web.
 
 O Diferencial: Sandbox de Dados O script força o WebKit a criar um contexto de dados ("perfil") exclusivo dentro da pasta wtp_data na raiz do projeto. Isso garante que:
-    - Seus cookies do WhatsApp não se misturam com seu navegador principal.
-    - Você tem portabilidade total (basta copiar a pasta para fazer backup da sessão).
+- Seus cookies do WhatsApp não se misturam com seu navegador principal.
+- Você tem portabilidade total (basta copiar a pasta para fazer backup da sessão).
 
 ## Licença
 Este projeto é desenvolvido sob a Licença Pública Geral GNU v3.0 (GPLv3).
 
 Isso significa que você tem a liberdade de:
 
-    - Usar o software para qualquer finalidade.
-    - Estudar como o programa funciona e adaptá-lo às suas necessidades.
-    - Redistribuir cópias de modo que você possa ajudar ao seu próximo.
-    - Aperfeiçoar o programa e liberar os seus aperfeiçoamentos, de modo que toda a comunidade se beneficie.
+- Usar o software para qualquer finalidade.
+- Estudar como o programa funciona e adaptá-lo às suas necessidades.
+- Redistribuir cópias de modo que você possa ajudar ao seu próximo.
+- Aperfeiçoar o programa e liberar os seus aperfeiçoamentos, de modo que toda a comunidade se beneficie.
 
 Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
